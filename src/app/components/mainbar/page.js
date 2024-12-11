@@ -8,7 +8,7 @@ function Mainbar() {
       <div className="Main_conatainer">
         <div className="profile_section">
           <h3>Hello, i’m</h3>
-          <h1>Rajesh Sarkar</h1>
+          <h1>Rajesh S.Sarkar</h1>
           <p>
             Freelance Softwere developer, Fullstack developer, & Data Miner. <br />I
             create seamless web experiences for end-users.

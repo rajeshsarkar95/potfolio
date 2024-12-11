@@ -4,7 +4,7 @@
   padding: 20px;
 }
 .sub_card {
-  width: 75%;
+  width: 77%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -69,7 +69,7 @@ p {
   margin-top: 4px;
 }
 .Skills_heading {
-  margin-left: 211px;
+  margin-left: 196px;
   color: rgb(113, 4, 215);
 }
 @media (max-width: 1024px) {

@@ -1,15 +1,12 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import "./navbar.css";
 import Link from "next/link";
-
 function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
-
   return (
     <div>
       <nav>
