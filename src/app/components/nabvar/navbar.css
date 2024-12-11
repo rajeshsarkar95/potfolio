@@ -9,7 +9,6 @@ nav {
   top: 0;
   z-index: 10;
 }
-
 .logoname {
   color: aliceblue;
   margin-left: 50px;
@@ -102,14 +101,14 @@ ul a {
 
 /* Media Query for Mobile Screens */
 @media (max-width: 768px) {
-  nav{
+  nav {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
   }
   .navigation {
     display: none;
   }
-  ul{
+  ul {
     display: flex;
     flex-direction: column;
     gap: 12px;

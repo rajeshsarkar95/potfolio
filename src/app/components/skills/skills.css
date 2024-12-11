@@ -1,124 +1,128 @@
 /* Base Styles */
 .card_conatainer {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-  }
-  
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.sub_card {
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.card {
+  margin-top: 15px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: flex;
+  gap: 12px;
+  width: 31%;
+  align-items: center;
+  height: 15vh;
+  background-color: rgb(1, 1, 5);
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.javascript_images {
+  width: 95%;
+  height: 12%;
+}
+
+.content,
+h1,
+p {
+  color: white;
+}
+
+.content p {
+  font-size: 15px;
+  opacity: 0.5;
+}
+
+.java_script {
+  margin-bottom: 0;
+}
+
+.javascript_difination {
+  margin-top: 4px;
+}
+
+.Skills_heading {
+  margin-left: 211px;
+  color: rgb(113, 4, 215);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
   .sub_card {
-    width: 75%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 15px;
-   
+    width: 90%;
+    gap: 20px;
   }
-  
+
   .card {
-    margin-top: 15px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    display: flex;
-    gap: 12px;
-    width: 31%;
+    width: 45%; /* Two cards per row on medium screens */
+    height: auto;
+    padding: 15px;
+    flex-direction: column; /* Stack content vertically */
     align-items: center;
-    height: 15vh;
-    background-color: rgb(1, 1, 5);
-    border-radius: 6px;
+  }
+
+  .content p {
+    font-size: 14px;
+  }
+
+  .Skills_heading {
+    margin-left: 50px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sub_card {
+    width: 100%;
+    gap: 15px;
+  }
+
+  .card {
+    width: 90%; /* Single card per row */
+    height: auto;
     padding: 10px;
   }
-  
-  .javascript_images {
-    width: 95%;
-    height: 12%;
-  }
-  
-  .content,
-  h1,
-  p {
-    color: white;
-  }
-  
-  .content p {
-    font-size: 15px;
-    opacity: 0.5;
-  }
-  
-  .java_script {
-    margin-bottom: 0;
-  }
-  
-  .javascript_difination {
-    margin-top: 4px;
-  }
-  
+
   .Skills_heading {
-    margin-left: 211px;
-    color: rgb(113, 4, 215);
+    margin-left: 20px;
+    font-size: 20px;
+    text-align: center;
   }
-  
-  /* Responsive Styles */
-  @media (max-width: 1024px) {
-    .sub_card {
-      width: 90%;
-      gap: 20px;
-    }
-  
-    .card {
-      width: 45%; /* Two cards per row on medium screens */
-      height: auto;
-      padding: 15px;
-      flex-direction: column; /* Stack content vertically */
-      align-items: center;
-    }
-  
-    .content p {
-      text-align: center;
-      font-size: 14px;
-    }
-  
-    .Skills_heading {
-      margin-left: 50px;
-      font-size: 24px;
-    }
+}
+
+@media (max-width: 480px) {
+  .card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 8px;
   }
-  
-  @media (max-width: 768px) {
-    .sub_card {
-      width: 100%;
-      gap: 15px;
-    }
-  
-    .card {
-      width: 90%; /* Single card per row */
-      height: auto;
-      padding: 10px;
-    }
-  
-    .Skills_heading {
-      margin-left: 20px;
-      font-size: 20px;
-      text-align: center;
-    }
+  .content {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
   }
-  
-  @media (max-width: 480px) {
-    .card {
-      width: 100%;
-      padding: 8px;
-    }
-  
-    .content h1 {
-      font-size: 18px;
-    }
-  
-    .content p {
-      font-size: 12px;
-    }
-  
-    .Skills_heading {
-      margin-left: 0;
-      font-size: 18px;
-      text-align: center;
-    }
+
+  .content h1 {
+    font-size: 18px;
   }
-  
+
+  .content p {
+    font-size: 12px;
+  }
+
+  .Skills_heading {
+    margin-left: 0;
+    font-size: 18px;
+    text-align: center;
+  }
+}

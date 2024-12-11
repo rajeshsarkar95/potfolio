@@ -21,8 +21,7 @@ function Skill() {
             <div className="content">
               <h1 className="java_script">javascript</h1>
               <p className="javascript_difination">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Deleniti accusantium iure quo error debitis perferendis,
+              JavaScript is a scripting language that enables dynamic, interactive content creation, allowing real-time updates and user interaction on webpages.
               </p>
             </div>
           </div>
@@ -44,8 +43,7 @@ function Skill() {
             <div className="content">
               <h1 className="java_script">React js</h1>
               <p className="javascript_difination">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Deleniti accusantium iure quo error debitis perferendis,
+              React.js is a JavaScript library for building user interfaces, enabling fast, efficient, and dynamic web applications using components.
               </p>
             </div>
           </div>
@@ -62,8 +60,7 @@ function Skill() {
             <div className="content">
               <h1 className="java_script">Html</h1>
               <p className="javascript_difination">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Deleniti accusantium iure quo error debitis perferendis,
+              HTML HyperText Markup Language is the standard language used to create and structure content on the web, such as text, images, and links.
               </p>
             </div>
           </div>
@@ -80,8 +77,7 @@ function Skill() {
             <div className="content">
               <h1 className="java_script">Next js</h1>
               <p className="javascript_difination">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Deleniti accusantium iure quo error debitis perferendis,
+              Next.js is a React framework that enables server-side rendering, static site generation, and easy routing, enhancing performance and SEO.
               </p>
             </div>
           </div>
@@ -98,8 +94,7 @@ function Skill() {
             <div className="content">
               <h1 className="java_script">CSS</h1>
               <p className="javascript_difination">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Deleniti accusantium iure quo error debitis perferendis,
+              CSS for Cascading Style Sheets is a stylesheet language used to describe the presentation of a web page, including layout, colors, fonts, and spacing.
               </p>
             </div>
           </div>
@@ -122,8 +117,7 @@ function Skill() {
             <div className="content">
               <h1 className="java_script">Node js</h1>
               <p className="javascript_difination">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Deleniti accusantium iure quo error debitis perferendis,
+              Node.js is a JavaScript runtime built on Chrome s V8 engine that allows server-side scripting, enabling fast and scalable network applications.
               </p>
             </div>
           </div>
@@ -141,8 +135,7 @@ function Skill() {
             <div className="content">
               <h1 className="java_script">Express js</h1>
               <p className="javascript_difination">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Deleniti accusantium iure quo error debitis perferendis,
+              Express.js is a lightweight web application framework for Node.js, designed to build robust APIs and web applications with minimal setup.
               </p>
             </div>
           </div>

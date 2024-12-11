@@ -87,8 +87,8 @@
 
   .profile_image {
     margin: 20px 0;
-    height: 200px;
-    width: 200px;
+    height: 346px;
+    width: 333px;
   }
 
   .profile_section h1 {
@@ -133,8 +133,5 @@
     font-size: 14px;
   }
 
-  .profile_image {
-    height: 150px;
-    width: 150px;
-  }
+ 
 }
