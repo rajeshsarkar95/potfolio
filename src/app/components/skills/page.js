@@ -68,10 +68,11 @@ function Skill() {
           <div className="card">
             <div className="card_images">
               <Image
-                src="/images/next.js.png"
+                style={{backgroundColor:"white"}}
+                src="/images/nextjs.png"
                 width={100}
                 height={100}
-                alt="Picture of the author"
+                alt="next js"
               />
             </div>
             <div className="content">
