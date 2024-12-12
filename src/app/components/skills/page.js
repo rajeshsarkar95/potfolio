@@ -140,6 +140,29 @@ function Skill() {
               </p>
             </div>
           </div>
+          {/* card 3 */}
+          <div className="card">
+            <div className="card_images">
+              <Image
+                // style={{backgroundColor:"white"}}
+                src="/images/mongodb.png"
+                width={100}
+                height={100}
+                alt="Picture of the author"
+              />
+            </div>
+            <div className="content">
+              <h1 className="java_script">MongoDB</h1>
+              <p className="javascript_difination">
+              MongoDB is a lightweight, NoSQL database designed to store and manage data in a flexible, scalable, and document-oriented format
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="servise_offer">
+        <div className="card_offer">
+          
         </div>
       </div>
     </>

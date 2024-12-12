@@ -15,7 +15,7 @@ function Mainbar() {
           </p>
           <div className="profile_button">
             <button className="aboutme">About me</button>
-            <button className="project">Project</button>
+            <button className="project">Projects</button>
           </div>
         </div>
         <div className="profile_image">

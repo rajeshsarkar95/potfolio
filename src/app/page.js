@@ -3,6 +3,7 @@ import Navbar from "./components/nabvar/page";
 import Mainbar from "./components/mainbar/page";
 import Skill from "./components/skills/page";
 import Contact from "./components/contact/page";
+import Footer from "./components/footer/page";
 
 
 export default function App() {
@@ -11,6 +12,7 @@ export default function App() {
       <Navbar />
       <Mainbar />
       <Skill/>
+      <Footer/>
     </>
   );
 }
