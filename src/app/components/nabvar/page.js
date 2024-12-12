@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import "./navbar.css";
+import Image from "next/image";
 import Link from "next/link";
 function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -15,10 +16,18 @@ function Navbar() {
         </div>
         <div className="navigation">
           <ul>
-            <Link href="">Home</Link>
-            <Link href="">About me</Link>
-            <Link href="">Project</Link>
-            <Link href="">Contact</Link>
+            <li class="underline-effect">
+              <Link href="">Home</Link>
+            </li>
+            <li class="underline-effect">
+              <Link href="">About Me</Link>
+            </li>
+            <li class="underline-effect">
+              <Link href="">Project</Link>
+            </li>
+            <li class="underline-effect">
+              <Link href="">Contact</Link>
+            </li>
           </ul>
         </div>
         <div className="hamburger" onClick={toggleSidebar}>
@@ -42,6 +51,9 @@ function Navbar() {
             <Link href="">Contact</Link>
           </li>
         </ul>
+        <Link href="">
+          <Image src="" alt="" />
+        </Link>
       </div>
       <div
         className={`backdrop ${isSidebarOpen ? "show" : ""}`}

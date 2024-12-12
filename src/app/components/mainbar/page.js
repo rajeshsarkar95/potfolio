@@ -1,20 +1,21 @@
 import React from "react";
 import "./mainbar.css";
 import Image from "next/image";
+import { IoEyeSharp } from "react-icons/io5";
 
 function Mainbar() {
   return (
     <div>
       <div className="Main_conatainer">
         <div className="profile_section">
-          <h3>Hello, i’m</h3>
+          <h1 className="hello_name">Hello, i’m</h1>
           <h1>Rajesh S.Sarkar</h1>
-          <p>
+          <p className="my_difination">
             Freelance Softwere developer, Fullstack developer, & Data Miner. <br />I
             create seamless web experiences for end-users.
           </p>
           <div className="profile_button">
-            <button className="aboutme">About me</button>
+            <button className="aboutme">About me </button>
             <button className="project">Projects</button>
           </div>
         </div>

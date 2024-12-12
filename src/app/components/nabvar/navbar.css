@@ -8,6 +8,47 @@ nav {
   top: 0;
   z-index: 10;
 }
+.underline-effect {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.underline-effect::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: white; 
+  transition: width 0.3s ease-in-out; 
+}
+.underline-effect:hover::after {
+  width: 100%; 
+}
+
+@keyframes underline-effect-in {
+  0% {
+    transform: translateX(-100%);
+    width: 0;
+  }
+  100% {
+    transform: translateX(0);
+    width: 100%;
+  }
+}
+@keyframes underline-effect-out {
+  0% {
+    transform: translateX(0);
+    width: 100%;
+  }
+  100% {
+    transform: translateX(-100%);
+    width: 0;
+  }
+}
+
+
 .logoname {
   color: aliceblue;
   margin-left: 100px;
