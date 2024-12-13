@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import "./mainbar.css";
 import { IoMdClose } from "react-icons/io";
 import Image from "next/image";
+import Link from "next/link";
 
 
 function Mainbar() {
@@ -26,7 +27,8 @@ function Mainbar() {
             <button onClick={togglePopup} className="aboutme">
               About me{" "}
             </button>
-            <button className="project">Projects</button>
+            <button onClick={() => window.location.href = '/components/project'} className="project">Projects</button>
+
           </div>
         </div>
         {isopen && (
