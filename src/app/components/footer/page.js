@@ -16,38 +16,38 @@ function Footer() {
         <div className="footer-column">
             <h3>Services</h3>
             <ul className="footer-list">
-                <li className="footer-list-item"><a href="#" class="footer-list-link">Web Hosting</a></li>
-                <li className="footer-list-item"><a href="#" class="footer-list-link">Domains</a></li>
-                <li className="footer-list-item"><a href="#" class="footer-list-link">Premium Hosting</a></li>
-                <li className="footer-list-item"><a href="#" class="footer-list-link">Private Server</a></li>
-                <li className="footer-list-item"><a href="#" class="footer-list-link">E-mail Hosting</a></li>
+                <li className="footer-list-item"><a href="#" className="footer-list-link">Web Hosting</a></li>
+                <li className="footer-list-item"><a href="#" className="footer-list-link">Domains</a></li>
+                <li className="footer-list-item"><a href="#" className="footer-list-link">Premium Hosting</a></li>
+                <li className="footer-list-item"><a href="#" className="footer-list-link">Private Server</a></li>
+                <li className="footer-list-item"><a href="#" className="footer-list-link">E-mail Hosting</a></li>
             </ul>
         </div>
-        <div class="footer-column">
+        <div className="footer-column">
             <h3>Support</h3>
             <ul className="footer-list">
-                <li className="footer-list-item"><a href="#" class="footer-list-link">Pricing Plan</a></li>
-                <li className="footer-list-item"><a href="#" class="footer-list-link">Documentation</a></li>
-                <li className="footer-list-item"><a href="#" class="footer-list-link">Guide</a></li>
-                <li className="footer-list-item"><a href="#" class="footer-list-link">Tutorial</a></li>
+                <li className="footer-list-item"><a href="#" className="footer-list-link">Pricing Plan</a></li>
+                <li className="footer-list-item"><a href="#" className="footer-list-link">Documentation</a></li>
+                <li className="footer-list-item"><a href="#" className="footer-list-link">Guide</a></li>
+                <li className="footer-list-item"><a href="#" className="footer-list-link">Tutorial</a></li>
             </ul>
         </div>
-        <div class="footer-column">
+        <div className="footer-column">
             <h3>Company</h3>
             <ul className="footer-list">
-                <li className="footer-list-item"><a href="#" class="footer-list-link">About</a></li>
-                <li className="footer-list-item"><a href="#" class="footer-list-link">Blog</a></li>
-                <li className="footer-list-item"><a href="#" class="footer-list-link">Join Us</a></li>
-                <li className="footer-list-item"><a href="#" class="footer-list-link">Press</a></li>
-                <li className="footer-list-item"><a href="#" class="footer-list-link">Partners</a></li>
+                <li className="footer-list-item"><a href="#" className="footer-list-link">About</a></li>
+                <li className="footer-list-item"><a href="#" className="footer-list-link">Blog</a></li>
+                <li className="footer-list-item"><a href="#" className="footer-list-link">Join Us</a></li>
+                <li className="footer-list-item"><a href="#" className="footer-list-link">Press</a></li>
+                <li className="footer-list-item"><a href="#" className="footer-list-link">Partners</a></li>
             </ul>
         </div>
-        <div class="footer-column">
+        <div className="footer-column">
             <h3>Legal</h3>
-            <ul class="footer-list">
-                <li className="footer-list-item"><a href="#" class="footer-list-link">Claim</a></li>
-                <li className="footer-list-item"><a href="#" class="footer-list-link">Privacy</a></li>
-                <li className="footer-list-item"><a href="#" class="footer-list-link">Terms</a></li>
+            <ul className="footer-list">
+                <li className="footer-list-item"><a href="#" className="footer-list-link">Claim</a></li>
+                <li className="footer-list-item"><a href="#" className="footer-list-link">Privacy</a></li>
+                <li className="footer-list-item"><a href="#" className="footer-list-link">Terms</a></li>
             </ul>
         </div>
     </footer>

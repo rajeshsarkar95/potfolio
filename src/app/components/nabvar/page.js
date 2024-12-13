@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import "./navbar.css";
 import Image from "next/image";
 import Link from "next/link";
+
+
 function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const toggleSidebar = () => {
@@ -16,17 +18,17 @@ function Navbar() {
         </div>
         <div className="navigation">
           <ul>
-            <li class="underline-effect">
-              <Link href="">Home</Link>
+            <li className="underline-effect">
+              <Link href="/">Home</Link>
             </li>
-            <li class="underline-effect">
-              <Link href="">About Me</Link>
+            <li className="underline-effect">
+              <Link href="#">About Me</Link>
             </li>
-            <li class="underline-effect">
-              <Link href="">Project</Link>
+            <li className="underline-effect">
+              <Link  href="/components/project">Projects</Link>
             </li>
-            <li class="underline-effect">
-              <Link href="">Contact</Link>
+            <li className="underline-effect">
+              <Link href="#">Contact</Link>
             </li>
           </ul>
         </div>
@@ -39,21 +41,19 @@ function Navbar() {
       <div className={`sidebar ${isSidebarOpen ? "open" : ""}`}>
         <ul>
           <li onClick={toggleSidebar}>
-            <Link href="">Home</Link>
+            <Link href="/">Home</Link>
           </li>
           <li onClick={toggleSidebar}>
-            <Link href="">About me</Link>
+            <Link href="#">About me</Link>
           </li>
           <li onClick={toggleSidebar}>
-            <Link href="">Project</Link>
+            <Link href="/components/project">Projects</Link>
           </li>
           <li onClick={toggleSidebar}>
-            <Link href="">Contact</Link>
+            <Link href="#">Contact</Link>
           </li>
         </ul>
-        <Link href="">
-          <Image src="" alt="" />
-        </Link>
+
       </div>
       <div
         className={`backdrop ${isSidebarOpen ? "show" : ""}`}

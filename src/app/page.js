@@ -6,13 +6,12 @@ import Contact from "./components/contact/page";
 import Footer from "./components/footer/page";
 
 
-export default function App() {
+
+export default function App({Component,pageProps}) {
   return (
     <>
-      <Navbar />
       <Mainbar />
       <Skill/>
-      <Footer/>
     </>
   );
 }
