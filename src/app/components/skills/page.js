@@ -30,7 +30,6 @@ function Skill() {
         </div>
       </div>
       {/* frontend */}
-
       {/* card 1 */}
       <h1 className="Skills_heading">Frontend</h1>
       <div className="card_conatainer">
@@ -197,7 +196,7 @@ function Skill() {
         </div>
       </div>
       <div className="servise_offer">
-        <div className="card_offer"></div>
+      <div className="card_offer"></div>
       </div>
     </>
   );

@@ -101,7 +101,21 @@ ul a {
   transition: 0.3s ease-in-out;
   z-index: 20;
 }
+.nav_socials{
+  display: flex;
+  gap: 10%;
+  margin-bottom: 40px;
+  color: aliceblue;
+}
+.nav_social-icon{
+  color: white;
+  filter: brightness(0) saturate(100%) invert(40%) sepia(75%) saturate(700%) hue-rotate(200deg) brightness(95%) contrast(85%);
+}
 .sidebar.open {
+  display: flex;
+  color: white;
+  flex-direction: column;
+  justify-content: space-between;
   right: 0;
 }
 .sidebar ul {

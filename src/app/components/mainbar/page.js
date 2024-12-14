@@ -28,7 +28,6 @@ function Mainbar() {
               About me{" "}
             </button>
             <button onClick={() => window.location.href = '/components/project'} className="project">Projects</button>
-
           </div>
         </div>
         {isopen && (

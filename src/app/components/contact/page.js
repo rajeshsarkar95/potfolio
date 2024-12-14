@@ -1,85 +1,86 @@
-'use client';
-import { useState } from 'react';
-import './contact.css';
+/* eslint-disable jsx-a11y/alt-text */
+import React from "react";
+import "./contact.css";
+import Image from "next/image";
+import Link from "next/link";
 
-export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    });
-  };
-
+function Contact() {
   return (
-    <div className="contact-container">
-      <h1>Contact Us</h1>
-      <p>Get in touch with us</p>
-      
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label>Name:</label>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
+    <div className="container">
+      <h1 className="title">Contact me</h1>
+      <p className="subtitle">
+        A high-quality solution for those who want <br />a beautiful startup
+        website quickly.
+      </p>
+      <div className="contact-section">
+        <p className="label">E-MAIL</p>
+        <a href="mailto:info@topass.com" className="contact-info">
+          prorajeshsarkar@gmail.com
+        </a>
+      </div>
+      <div className="contact-section">
+        <p className="label">PHONE</p>
+        <p className="contact-info">91+9568755984</p>
+      </div>
+      <p className="label">Social</p>
+      <div className="socials">
+        <Link href="https://www.facebook.com/profile.php?id=100056700738524">
+          <Image
+            src="/social/feacbook.png"
+            className="social-icon"
+            width={20}
+            height={20}
+            alt="feacbook"
           />
-        </div>
-
-        <div className="form-group">
-          <label>Email:</label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
+        </Link>
+        <Link href="https://api.whatsapp.com/send?phone=9568755984">
+          <Image
+            src="/social/Whatapp.png"
+            className="social-icon"
+            width={20}
+            height={20}
+            alt="whatapp"
           />
-        </div>
-
-        <div className="form-group">
-          <label>Subject:</label>
-          <input
-            type="text"
-            name="subject"
-            value={formData.subject}
-            onChange={handleChange}
-            required
+        </Link>
+        <Link href="">
+          <Image
+            src="/social/p.png"
+            className="social-icon"
+            width={20}
+            height={20}
+            alt="p"
           />
-        </div>
-
-        <div className="form-group">
-          <label>Message:</label>
-          <textarea
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-            rows="5"
+        </Link>
+        <Link href="https://x.com/Rajesh956875">
+          <Image
+            src="/social/twiter.png"
+            className="social-icon"
+            width={20}
+            height={20}
+            alt="twiter"
           />
-        </div>
-
-        <button type="submit">Send Message</button>
-      </form>
+        </Link>
+        <Link href="">
+          <Image
+            src="/social/ni.png"
+            className="social-icon"
+            width={20}
+            height={20}
+            alt="linkedin"
+          />
+        </Link>
+        <Link href="https://www.instagram.com/raj_e_sh_sarkar/">
+          <Image
+            src="/social/instagram.png"
+            className="social-icon"
+            width={20}
+            height={20}
+            alt="instagram"
+          />
+        </Link>
+      </div>
+      {/*  */}
     </div>
   );
 }
+export default Contact;
