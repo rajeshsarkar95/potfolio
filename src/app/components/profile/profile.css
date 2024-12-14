@@ -1,0 +1,160 @@
+.welcome-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-height: 70vh;
+}
+.container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-wrap: wrap; 
+}
+.profile-image img {
+  width: 250px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.content {
+  flex: 1;
+  padding: 20px;
+}
+.name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+.position {
+  font-size: 1rem;
+  font-style: italic;
+  color: white;
+  margin-bottom: 20px;
+}
+.welcome-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+}
+.message {
+  line-height: 1.6;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: white;
+}
+.images_gallary {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+}
+.images_card {
+  display: inline-block;
+  position: relative;
+  transition: transform 0.3s ease, border 0.3s ease;
+  border: 2px solid transparent;
+}
+
+
+.images_card:hover {
+  animation: rotateAndBorder 0.3s ease forwards;
+}
+
+@keyframes rotateAndBorder {
+  0% {
+    transform: rotate(0deg);
+    border-color: transparent;
+  }
+  50% {
+    transform: rotate(1deg);
+    border-color: transparent;
+  }
+  100% {
+    transform: rotate(0deg);
+    border-color: cadetblue;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .welcome-section {
+    padding: 15px;
+  }
+  .container {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 80px;
+  }
+
+  .profile-image img {
+    width: 200px;
+  }
+
+  .welcome-title {
+    font-size: 2rem;
+  }
+
+  .name {
+    font-size: 1.3rem;
+  }
+
+  .position {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-top: 80px;
+  }
+  .welcome-section {
+    padding: 10px;
+  }
+
+  .profile-image img {
+    width: 150px;
+  }
+
+  .welcome-title {
+    font-size: 1.8rem;
+  }
+
+  .name {
+    font-size: 1.2rem;
+  }
+
+  .position {
+    font-size: 0.8rem;
+  }
+
+  .message {
+    font-size: 0.9rem; 
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    gap: 10px;
+    margin-top: 80px;
+  }
+
+  .profile-image img {
+    width: 120px; 
+  }
+  .welcome-title {
+    font-size: 1.5rem;
+  }
+
+  .name {
+    font-size: 1rem;
+  }
+
+  .message {
+    font-size: 0.8rem;
+  }
+}

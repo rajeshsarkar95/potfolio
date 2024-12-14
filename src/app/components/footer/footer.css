@@ -4,7 +4,6 @@
   justify-content: center;
   background-color: rgb(12, 12, 26);
 }
-
 footer {
   float: none;
   width: 76%;
@@ -29,14 +28,12 @@ footer {
   margin: 10px;
   min-width: 150px;
 }
-
 .footer-column h3 {
   font-size: 31px;
   margin-bottom: 15px;
   font-weight: 600;
   color: #bdc3c7;
 }
-
 .footer-list {
   gap: 5px;
   display: flex;
@@ -44,32 +41,26 @@ footer {
   list-style: none;
   padding: 0;
 }
-
 .footer-list-item {
   margin-bottom: 10px;
 }
-
 .footer-list-link {
   text-decoration: none;
   color: #ecf0f1;
   font-size: 14px;
   transition: color 0.3s;
 }
-
 .footer-list-link:hover {
   color: #1abc9c;
 }
-
 .footer-info {
   max-width: 200px;
 }
-
 .footer-info p {
   font-size: 14px;
   margin-bottom: 10px;
   line-height: 1.5;
 }
-
 .footer-info a {
   text-decoration: none;
   color: #ecf0f1;

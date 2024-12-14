@@ -22,7 +22,7 @@ function Navbar() {
               <Link href="/">Home</Link>
             </li>
             <li className="underline-effect">
-              <Link href="#">About Me</Link>
+              <Link href="components/profile">About Me</Link>
             </li>
             <li className="underline-effect">
               <Link href="/components/project">Projects</Link>
@@ -44,7 +44,7 @@ function Navbar() {
             <Link href="/">Home</Link>
           </li>
           <li onClick={toggleSidebar}>
-            <Link href="#">About me</Link>
+            <Link href="components/profile">About me</Link>
           </li>
           <li onClick={toggleSidebar}>
             <Link href="/components/project">Projects</Link>
