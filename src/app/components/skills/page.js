@@ -192,11 +192,67 @@ function Skill() {
                 format
               </p>
             </div>
+
           </div>
         </div>
       </div>
-      <div className="servise_offer">
-      <div className="card_offer"></div>
+      {/* tools */}
+      <h1 className="Skills_heading">Tools</h1>
+      <div className="card_conatainer">
+        <div className="sub_card">
+          <div className="card">
+            <div className="card_images">
+              <Image
+                src="/images/vscode.png"
+                width={100}
+                height={100}
+                alt="Picture of the author"
+              />
+            </div>
+            <div className="content">
+              <h1 className="java_script">Vs Code</h1>
+              <p className="javascript_difination">
+              VS Code: Lightweight, free, open-source code editor for efficient coding, debugging, and supporting multiple languages with powerful extensions and version control integration.
+              </p>
+            </div>
+          </div>
+          {/* card 2 */}
+          <div className="card">
+            <div className="card_images">
+              <Image
+                src="/images/git.png"
+                width={100}
+                height={100}
+                alt="Picture of the author"
+              />
+            </div>
+            <div className="content">
+              <h1 className="java_script">Git</h1>
+              <p className="javascript_difination">
+              Git: A free, open-source version control system for tracking changes, managing code history, and enabling collaboration among developers on software projects
+              </p>
+            </div>
+          </div>
+          {/* card 3 */}
+          <div className="card">
+            <div className="card_images">
+              <Image
+                style={{backgroundColor:"white"}}
+                src="/images/github.png"
+                width={100}
+                height={100}
+                alt="Picture of the author"
+              />
+            </div>
+            <div className="content">
+              <h1 className="java_script">Github</h1>
+              <p className="javascript_difination">
+              GitHub: A platform for hosting Git repositories, enabling version control, collaboration, and sharing of code with a community of developers.
+              </p>
+            </div>
+
+          </div>
+        </div>
       </div>
     </>
   );
