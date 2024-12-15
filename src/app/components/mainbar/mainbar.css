@@ -13,6 +13,31 @@
 .my_difination{
   font-size: 20px;
 }
+.hire_me {
+  position: fixed; 
+  bottom: 58px;    
+  right: 20px;     
+}
+
+.hireme_button {
+ background-color: rgb(52, 52, 53);
+  color: white;
+  text-decoration: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.hireme_button:hover {
+  background-color:aliceblue; 
+  color: black;
+}
+
 .profile_section {
   color: white;
   margin-top: 61px;

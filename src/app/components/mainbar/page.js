@@ -86,6 +86,9 @@ function Mainbar() {
           />
         </div>
       </div>
+      <div className="hire_me">
+        <Link href="https://api.whatsapp.com/send?phone=9568755984&text=I%20want%20to%20hire%20you" className="hireme_button">HIRE ME</Link>
+      </div>
       <div className="experience_profile">
         <div className="experience">
           <h1  className="about_me">About me:</h1>
