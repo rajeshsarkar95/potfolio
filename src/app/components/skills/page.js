@@ -128,6 +128,24 @@ function Skill() {
               </p>
             </div>
           </div>
+          {/* card */}
+          <div className="card">
+            <div className="card_images">
+              <Image
+                src="/images/TailwindCSS.png"
+                width={100}
+                height={100}
+                alt="Picture of the author"
+              />
+            </div>
+            <div className="content">
+              <h1 className="java_script">Tailwind Css</h1>
+              <p className="javascript_difination">
+              Tailwind CSS is a utility-first CSS framework that provides a collection of pre-defined classes to control the appearance of web pages
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
       {/*backend*/}

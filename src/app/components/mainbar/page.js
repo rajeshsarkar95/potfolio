@@ -6,10 +6,8 @@ import { IoMdClose } from "react-icons/io";
 import Image from "next/image";
 import Link from "next/link";
 
-
 function Mainbar() {
   const [isopen, setIsopen] = useState(false);
-
   const togglePopup = () => {
     setIsopen(!isopen);
   };
@@ -27,53 +25,133 @@ function Mainbar() {
             <button onClick={togglePopup} className="aboutme">
               About me{" "}
             </button>
-            <button onClick={() => window.location.href = '/components/project'} className="project">Projects</button>
+            <button
+              onClick={() => (window.location.href = "/components/project")}
+              className="project"
+            >
+              Projects
+            </button>
           </div>
         </div>
         {isopen && (
           <div className="popup">
             <div className="popup-inner">
               <div className="introduction">
-                <h2 style={{margin:"0"}}>About me</h2>
-                 <i onClick={togglePopup}><IoMdClose /></i>
-                </div>
-              <p className="my_intro">My name is Rajesh Sarkar, and I am a MERN stack developer with a strong focus on website development and React.js. I m also skilled in SEO and have experience building full-stack projects. Currently pursuing a Bachelor of Computer Applications,software engineering (BCA), I am passionate about technology and aspire to become a successful entrepreneur. I create content on coding and web development on my YouTube channel, where I share my knowledge to help others in the tech community. I m fluent in Bengali, Hindi, and English </p>
-              <h2 style={{margin:"0"}} >Skills</h2>
+                <h2 style={{ margin: "0" }}>About me</h2>
+                <i onClick={togglePopup}>
+                  <IoMdClose />
+                </i>
+              </div>
+              <p className="my_intro">
+                My name is Rajesh Sarkar, and I am a MERN stack developer with a
+                strong focus on website development and React.js. I m also
+                skilled in SEO and have experience building full-stack projects.
+                Currently pursuing a Bachelor of Computer Applications,software
+                engineering (BCA), I am passionate about technology and aspire
+                to become a successful entrepreneur. I create content on coding
+                and web development on my YouTube channel, where I share my
+                knowledge to help others in the tech community. I m fluent in
+                Bengali, Hindi, and English{" "}
+              </p>
+              <h2 style={{ margin: "0" }}>Skills</h2>
               <div className="icon">
                 <div className="skills_icon">
-                 <i><Image className="skill_ico"  src="/icon/HTML5.png" alt="html5" width={20} height={20}/></i>
-                 <h6 >HTML5</h6>
+                  <i>
+                    <Image
+                      className="skill_ico"
+                      src="/icon/HTML5.png"
+                      alt="html5"
+                      width={20}
+                      height={20}
+                    />
+                  </i>
+                  <h6>HTML5</h6>
                 </div>
                 <div className="skills_icon">
-                 <i><Image className="skill_ico" src="/icon/CSS3.png" alt="css3" width={20} height={20}/></i>
-                 <h6 >CSS3</h6>
+                  <i>
+                    <Image
+                      className="skill_ico"
+                      src="/icon/CSS3.png"
+                      alt="css3"
+                      width={20}
+                      height={20}
+                    />
+                  </i>
+                  <h6>CSS3</h6>
                 </div>
                 <div className="skills_icon">
-                 <i><Image className="skill_ico" src="/icon/javascript.png" alt="javascript" width={20} height={20}/></i>
-                 <h6 >JavaScript</h6>
+                  <i>
+                    <Image
+                      className="skill_ico"
+                      src="/icon/javascript.png"
+                      alt="javascript"
+                      width={20}
+                      height={20}
+                    />
+                  </i>
+                  <h6>JavaScript</h6>
                 </div>
                 <div className="skills_icon">
-                 <i><Image className="skill_ico" src="/icon/React.png" alt="reactjs" width={20} height={20}/></i>
-                 <h6 >React js</h6>
+                  <i>
+                    <Image
+                      className="skill_ico"
+                      src="/icon/React.png"
+                      alt="reactjs"
+                      width={20}
+                      height={20}
+                    />
+                  </i>
+                  <h6>React js</h6>
                 </div>
                 <div className="skills_icon">
-                 <i><Image className="skill_ico" src="/icon/Nodejs.png" alt="nodejs" width={20} height={20}/></i>
-                 <h6 >NodeJs</h6>
+                  <i>
+                    <Image
+                      className="skill_ico"
+                      src="/icon/Nodejs.png"
+                      alt="nodejs"
+                      width={20}
+                      height={20}
+                    />
+                  </i>
+                  <h6>NodeJs</h6>
                 </div>
                 <div className="skills_icon">
-                 <i><Image className="skill_ico" src="/icon/vs.png" alt="vs code" width={20} height={20}/></i>
-                 <h6 >VS code</h6>
+                  <i>
+                    <Image
+                      className="skill_ico"
+                      src="/icon/vs.png"
+                      alt="vs code"
+                      width={20}
+                      height={20}
+                    />
+                  </i>
+                  <h6>VS code</h6>
                 </div>
                 <div className="skills_icon">
-                 <i><Image className="skill_ico" src="/icon/Shape.png" alt="Git" width={20} height={20}/></i>
-                 <h6 >Git</h6>
+                  <i>
+                    <Image
+                      className="skill_ico"
+                      src="/icon/Shape.png"
+                      alt="Git"
+                      width={20}
+                      height={20}
+                    />
+                  </i>
+                  <h6>Git</h6>
                 </div>
                 <div className="skills_icon">
-                 <i><Image className="skill_ico" src="/icon/npm.png" alt="Npm" width={20} height={20}/></i>
-                 <h6 >NPM</h6>
+                  <i>
+                    <Image
+                      className="skill_ico"
+                      src="/icon/npm.png"
+                      alt="Npm"
+                      width={20}
+                      height={20}
+                    />
+                  </i>
+                  <h6>NPM</h6>
                 </div>
               </div>
-              
             </div>
           </div>
         )}
@@ -87,12 +165,17 @@ function Mainbar() {
         </div>
       </div>
       <div className="hire_me">
-        <Link href="https://api.whatsapp.com/send?phone=9568755984&text=I%20want%20to%20hire%20you" className="hireme_button">HIRE ME</Link>
+        <Link
+          href="https://api.whatsapp.com/send?phone=9568755984&text=I%20want%20to%20hire%20you"
+          className="hireme_button"
+        >
+          HIRE ME
+        </Link>
       </div>
       <div className="experience_profile">
         <div className="experience">
-          <h1  className="about_me">About me:</h1>
-          <p style={{ opacity: "0.5" }}>
+          <h1 className="about_me">About me</h1>
+          <p className="paragraf" style={{ opacity: "0.5" }}>
             Hi, I m Rajesh Sarkar, a passionate frontend developer with a focus
             on creating dynamic and responsive web applications. With expertise
             in HTML, CSS, JavaScript, React.js, and the MERN stack, I specialize
@@ -102,10 +185,23 @@ function Mainbar() {
             I share tips, tutorials, and insights on frontend development to
             help you build seamless and visually appealing websites.
           </p>
+          <h1 className="about_me">Experience</h1>
+        </div>
+        <div className="experience-card">
+          <div className="experience-header">
+            <img
+              src="https://cdn.worldvectorlogo.com/logos/upwork-1.svg"
+              alt="Upwork Logo"
+              className="company-logo"
+            />
+            <div>
+              <h2 className="job-title">Frontend Developer</h2>
+              <p className="duration">Nov 2023 - Present</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
 }
-
 export default Mainbar;

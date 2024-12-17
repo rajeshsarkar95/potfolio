@@ -1,8 +1,30 @@
-import React from "react";
+"use client";  // Ensure it's a client-side component
+
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import "./profile.css";
 
 function Profile() {
+  const [refreshCount, setRefreshCount] = useState(0);
+  useEffect(() => {
+    const storedCount = localStorage.getItem("refreshCount");
+    if (storedCount) {
+      setRefreshCount(parseInt(storedCount, 10));  
+    }
+  }, []);
+  useEffect(() => {
+    if (refreshCount !== 0) {
+      localStorage.setItem("refreshCount", refreshCount);
+    }
+  }, [refreshCount]);
+  const handleRefresh = () => {
+    setRefreshCount((prev) => prev + 1);
+  };
+
+  setTimeout(()=>{
+    handleRefresh
+  },1000)
+
   return (
     <div>
       <section className="welcome-section">
@@ -10,17 +32,17 @@ function Profile() {
           <div className="profile-image">
             <Image
               src="/profiles/profile.jpg"
-              alt="John Doe"
+              alt="Rajesh Sarkar"
               width={300}
               height={400}
             />
           </div>
           <div className="content">
             <h2 className="name">Rajesh Sarkar</h2>
-            <p className="position">Softwere Developer</p>
+            <p className="position">Software Developer</p>
             <h1 className="welcome-title">Welcome Message</h1>
             <p className="message">
-              Hi there! I m Rajesh Sarkar, a passionate Frontend Developer with
+              Hi there! Im Rajesh Sarkar, a passionate Frontend Developer with
               expertise in crafting responsive and dynamic websites. With skills
               in React.js, Next.js, and the MERN stack, I thrive on building
               modern, interactive user experiences. Beyond coding, Im deeply
@@ -36,7 +58,7 @@ function Profile() {
         <div className="images_card">
           <Image
             src="/profiles/profile.jpg"
-            alt="John Doe"
+            alt="Profile"
             width={300}
             height={400}
           />
@@ -45,7 +67,7 @@ function Profile() {
           <Image
             className="galarry_images"
             src="/profiles/zym.jpg"
-            alt="John Doe"
+            alt="Gym"
             width={300}
             height={400}
           />
@@ -54,7 +76,7 @@ function Profile() {
           <Image
             className="galarry_images"
             src="/profiles/zym2.jpg"
-            alt="John Doe"
+            alt="Gym 2"
             width={300}
             height={400}
           />
@@ -63,7 +85,7 @@ function Profile() {
           <Image
             className="galarry_images"
             src="/profiles/park.jpg"
-            alt="John Doe"
+            alt="Park"
             width={300}
             height={400}
           />
@@ -72,7 +94,7 @@ function Profile() {
           <Image
             className="galarry_images"
             src="/profiles/park2.jpg"
-            alt="John Doe"
+            alt="Park 2"
             width={300}
             height={400}
           />

@@ -59,6 +59,7 @@ nav {
 }
 
 .navigation {
+  display: flex;
   margin-right: 50px;
 }
 

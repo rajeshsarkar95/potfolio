@@ -11,7 +11,7 @@
   gap: 20px;
   border-radius: 10px;
   overflow: hidden;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 .profile-image img {
   width: 250px;
@@ -56,30 +56,8 @@
 .images_card {
   display: inline-block;
   position: relative;
-  transition: transform 0.3s ease, border 0.3s ease;
   border: 2px solid transparent;
 }
-
-
-.images_card:hover {
-  animation: rotateAndBorder 0.3s ease forwards;
-}
-
-@keyframes rotateAndBorder {
-  0% {
-    transform: rotate(0deg);
-    border-color: transparent;
-  }
-  50% {
-    transform: rotate(1deg);
-    border-color: transparent;
-  }
-  100% {
-    transform: rotate(0deg);
-    border-color: cadetblue;
-  }
-}
-
 
 @media (max-width: 1024px) {
   .welcome-section {
@@ -133,7 +111,7 @@
   }
 
   .message {
-    font-size: 0.9rem; 
+    font-size: 0.9rem;
   }
 }
 
@@ -144,7 +122,7 @@
   }
 
   .profile-image img {
-    width: 120px; 
+    width: 120px;
   }
   .welcome-title {
     font-size: 1.5rem;

@@ -7,6 +7,7 @@ import Link from "next/link";
 
 function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
@@ -22,7 +23,7 @@ function Navbar() {
               <Link href="/">Home</Link>
             </li>
             <li className="underline-effect">
-              <Link href="components/profile">About Me</Link>
+              <Link href="/components/profile">About Me</Link>
             </li>
             <li className="underline-effect">
               <Link href="/components/project">Projects</Link>
@@ -44,7 +45,7 @@ function Navbar() {
             <Link href="/">Home</Link>
           </li>
           <li onClick={toggleSidebar}>
-            <Link href="components/profile">About me</Link>
+            <Link href="/components/profile">About me</Link>
           </li>
           <li onClick={toggleSidebar}>
             <Link href="/components/project">Projects</Link>
