@@ -1,6 +1,10 @@
 /* eslint-disable jsx-a11y/alt-text */
 "use client";
+import { IoMdHome } from "react-icons/io";
+import { FcAbout } from "react-icons/fc";
 import React, { useState } from "react";
+import { GrProjects } from "react-icons/gr";
+import { GrContact } from "react-icons/gr";
 import "./navbar.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -20,7 +24,7 @@ function Navbar() {
         <div className="navigation">
           <ul>
             <li className="underline-effect">
-              <Link href="/">Home</Link>
+             <Link href="/">Home</Link>
             </li>
             <li className="underline-effect">
               <Link href="/components/profile">About Me</Link>
@@ -42,16 +46,16 @@ function Navbar() {
       <div className={`sidebar ${isSidebarOpen ? "open" : ""}`}>
         <ul>
           <li onClick={toggleSidebar}>
-            <Link href="/">Home</Link>
+          <IoMdHome />  <Link href="/">Home</Link>
           </li>
           <li onClick={toggleSidebar}>
-            <Link href="/components/profile">About me</Link>
+          <FcAbout /> <Link href="/components/profile">About me</Link>
           </li>
           <li onClick={toggleSidebar}>
-            <Link href="/components/project">Projects</Link>
+          <GrProjects /> <Link href="/components/project">Projects</Link>
           </li>
           <li onClick={toggleSidebar}>
-            <Link href="/components/contact">Contact</Link>
+          <GrContact />  <Link href="/components/contact">Contact</Link>
           </li>
         </ul>
         {/* socail media */}
