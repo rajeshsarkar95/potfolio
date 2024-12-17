@@ -1,12 +1,40 @@
-/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @next/next/no-img-element */
 "use client";
-import React, { useState } from "react";
+import React, {useState,useEffect} from "react";
 import "./mainbar.css";
 import { IoMdClose } from "react-icons/io";
+import { FaDownload } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 
 function Mainbar() {
+  const [displayedText, setDisplayedText] = useState('');
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+  const texts = ['Frontend','React.Js', 'Next.js','Tailwind CSS',"Html","CSS","Javascript",'Backend','Node.js','MongoDB',"Express.js",'Tools',"Git","Github","Cursor Ai","Chat Gpt"];
+
+  const typingSpeed = 100;
+  const delay = 2000;
+  useEffect(() => {
+    if (currentTextIndex < texts.length) {
+      const currentText = texts[currentTextIndex];
+      const typingInterval = setInterval(() => {
+        if (charIndex < currentText.length) {
+          setDisplayedText((prev) => prev + currentText[charIndex]);
+          setCharIndex((prev) => prev + 1);
+        } else {
+          clearInterval(typingInterval); 
+          setTimeout(() => {
+            setDisplayedText('');
+            setCharIndex(0);
+            setCurrentTextIndex((prev) => (prev + 1) % texts.length); 
+          }, delay);
+        }
+      }, typingSpeed); 
+      return () => clearInterval(typingInterval); 
+    }
+  }, [currentTextIndex, charIndex, texts, typingSpeed, delay]);
   const [isopen, setIsopen] = useState(false);
   const togglePopup = () => {
     setIsopen(!isopen);
@@ -16,7 +44,10 @@ function Mainbar() {
       <div className="Main_conatainer">
         <div className="profile_section">
           <h1 className="hello_name">Hello, i’m</h1>
-          <h1>Rajesh S.Sarkar</h1>
+          <div className="typing_effect">
+          <h1>Rajesh S.Sarkar </h1>
+          <h1  className="typing_effect_heading" >{displayedText}</h1>
+          </div>
           <p className="my_difination">
             Freelance Softwere developer, Fullstack developer, & Data Miner.{" "}
             <br />I create seamless web experiences for end-users.
@@ -25,12 +56,15 @@ function Mainbar() {
             <button onClick={togglePopup} className="aboutme">
               About me{" "}
             </button>
-            <button
-              onClick={() => (window.location.href = "/components/project")}
-              className="project"
-            >
-              Projects
-            </button>
+            <a
+              href="/cv/Rajehssarkar.pdf" 
+              download="RajeshSarkar.pdf" 
+            ><button
+            className="project"
+          >
+            Download cv <FaDownload />
+          </button></a>
+            
           </div>
         </div>
         {isopen && (
@@ -43,7 +77,7 @@ function Mainbar() {
                 </i>
               </div>
               <p className="my_intro">
-                My name is Rajesh Sarkar, and I am a MERN stack developer with a
+                My name is Rajesh Sarkar , and I am a MERN stack developer with a
                 strong focus on website development and React.js. I m also
                 skilled in SEO and have experience building full-stack projects.
                 Currently pursuing a Bachelor of Computer Applications,software
