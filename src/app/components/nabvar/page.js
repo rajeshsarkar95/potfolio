@@ -4,58 +4,154 @@ import { IoMdHome } from "react-icons/io";
 import { FcAbout } from "react-icons/fc";
 import React, { useState } from "react";
 import { GrProjects } from "react-icons/gr";
+import { BsToggleOff } from "react-icons/bs";
 import { GrContact } from "react-icons/gr";
 import "./navbar.css";
 import Image from "next/image";
 import Link from "next/link";
+import { useAppContext } from "../../context/Appcontext";
+
+import { BsToggleOn } from "react-icons/bs";
 
 function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  
+
+  const { toggleColorMode, colormode } = useAppContext();
+
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
   return (
     <div>
-      <nav>
+      <nav
+        style={{
+          backgroundColor: colormode ? "white" : "",
+          padding: "10px",
+          transition: "background-color 0.3s ease, color 0.3s ease",
+        }}
+      >
         <div className="logoname">
-          <h2>Rajesh Sarkar</h2>
+          <h2
+            style={{
+              color: colormode ? "black" : " ",
+            }}
+          >
+            Rajesh Sarkar
+          </h2>
         </div>
         <div className="navigation">
+          {colormode ? (
+            <i
+              style={{
+                color: colormode ? "black" : "",
+              }}
+              className="color_button"
+              onClick={toggleColorMode}
+            >
+              <BsToggleOn />
+            </i>
+          ) : (
+            <i className="color_button" onClick={toggleColorMode}>
+              <BsToggleOff />
+            </i>
+          )}
           <ul>
             <li className="underline-effect">
-             <Link href="/">Home</Link>
+              <Link
+                style={{
+                  color: colormode ? "black" : " ",
+                }}
+                href="/"
+              >
+                Home
+              </Link>
             </li>
             <li className="underline-effect">
-              <Link href="/components/profile">About Me</Link>
+              <Link
+                style={{
+                  color: colormode ? "black" : " ",
+                }}
+                href="/components/profile"
+              >
+                About Me
+              </Link>
             </li>
             <li className="underline-effect">
-              <Link href="/components/project">Projects</Link>
+              <Link
+                style={{
+                  color: colormode ? "black" : " ",
+                }}
+                href="/components/project"
+              >
+                Projects
+              </Link>
             </li>
             <li className="underline-effect">
-              <Link href="/components/contact">Contact</Link>
+              <Link
+                style={{
+                  color: colormode ? "black" : " ",
+                }}
+                href="/components/contact"
+              >
+                Contact
+              </Link>
             </li>
           </ul>
         </div>
-        <div className="hamburger" onClick={toggleSidebar}>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
+        <div className="colormode_icon">
+          {colormode ? (
+            <i
+              style={{
+                color: colormode ? "black" : "",
+              }}
+              className="color_button"
+              onClick={toggleColorMode}
+            >
+              <BsToggleOn />
+            </i>
+          ) : (
+            <i className="color_button" onClick={toggleColorMode}>
+              <BsToggleOff />
+            </i>
+          )}
+        </div>
+        <div
+          className={`hamburger ${colormode ? "active" : ""}`}
+          onClick={toggleSidebar}
+        >
+          <div
+            style={{
+              backgroundColor: colormode ? "black" : "white",
+            }}
+            className="bar"
+          ></div>
+          <div
+            style={{
+              backgroundColor: colormode ? "black" : "white",
+            }}
+            className="bar"
+          ></div>
+          <div
+            style={{
+              backgroundColor: colormode ? "black" : "white",
+            }}
+            className="bar"
+          ></div>
         </div>
       </nav>
       <div className={`sidebar ${isSidebarOpen ? "open" : ""}`}>
         <ul>
           <li onClick={toggleSidebar}>
-          <IoMdHome />  <Link href="/">Home</Link>
+            <IoMdHome /> <Link href="/">Home</Link>
           </li>
           <li onClick={toggleSidebar}>
-          <FcAbout /> <Link href="/components/profile">About me</Link>
+            <FcAbout /> <Link href="/components/profile">About me</Link>
           </li>
           <li onClick={toggleSidebar}>
-          <GrProjects /> <Link href="/components/project">Projects</Link>
+            <GrProjects /> <Link href="/components/project">Projects</Link>
           </li>
           <li onClick={toggleSidebar}>
-          <GrContact />  <Link href="/components/contact">Contact</Link>
+            <GrContact /> <Link href="/components/contact">Contact</Link>
           </li>
         </ul>
         {/* socail media */}

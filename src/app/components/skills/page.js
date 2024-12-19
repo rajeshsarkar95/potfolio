@@ -1,12 +1,35 @@
+"use client";
 import React from "react";
 import "./skills.css";
 import Image from "next/image";
+import { useAppContext } from "../../context/Appcontext";
 
 function Skill() {
+  const { colormode } = useAppContext();
   return (
-    <>
-      <h1 className="Skills_heading">Skills:</h1>
-      <h1 className="Skills_heading">Language</h1>
+    <div
+      style={{
+        backgroundColor: colormode ? "" : "rgb(12, 12, 41)",
+      }}
+    >
+      <h1
+        style={{
+          color: colormode ? "black" : "",
+          backgroundColor: colormode ? "white" : "",
+        }}
+        className="Skills_heading"
+      >
+        Skills:
+      </h1>
+      <h1
+        style={{
+          color: colormode ? "black" : "",
+          backgroundColor: colormode ? "white" : "",
+        }}
+        className="Skills_heading"
+      >
+        Language
+      </h1>
       <div className="card_conatainer">
         <div className="sub_card">
           <div className="card">
@@ -31,7 +54,12 @@ function Skill() {
       </div>
       {/* frontend */}
       {/* card 1 */}
-      <h1 className="Skills_heading">Frontend</h1>
+      <h1
+      style={{
+        color: colormode ? "black" : "",
+        backgroundColor: colormode ? "white" : "",
+      }}
+       className="Skills_heading">Frontend</h1>
       <div className="card_conatainer">
         <div className="sub_card">
           <div className="card">
@@ -141,15 +169,21 @@ function Skill() {
             <div className="content">
               <h1 className="java_script">Tailwind Css</h1>
               <p className="javascript_difination">
-              Tailwind CSS is a utility-first CSS framework that provides a collection of pre-defined classes to control the appearance of web pages
+                Tailwind CSS is a utility-first CSS framework that provides a
+                collection of pre-defined classes to control the appearance of
+                web pages
               </p>
             </div>
           </div>
-
         </div>
       </div>
       {/*backend*/}
-      <h1 className="Skills_heading">backend</h1>
+      <h1
+      style={{
+        color: colormode ? "black" : "",
+        backgroundColor: colormode ? "white" : "",
+      }}
+      className="Skills_heading">backend</h1>
       <div className="card_conatainer">
         <div className="sub_card">
           <div className="card">
@@ -210,12 +244,16 @@ function Skill() {
                 format
               </p>
             </div>
-
           </div>
         </div>
       </div>
       {/* tools */}
-      <h1 className="Skills_heading">Tools</h1>
+      <h1
+      style={{
+        color: colormode ? "black" : "",
+        backgroundColor: colormode ? "white" : "",
+      }}
+       className="Skills_heading">Tools</h1>
       <div className="card_conatainer">
         <div className="sub_card">
           <div className="card">
@@ -230,7 +268,9 @@ function Skill() {
             <div className="content">
               <h1 className="java_script">Vs Code</h1>
               <p className="javascript_difination">
-              VS Code: Lightweight, free, open-source code editor for efficient coding, debugging, and supporting multiple languages with powerful extensions and version control integration.
+                VS Code: Lightweight, free, open-source code editor for
+                efficient coding, debugging, and supporting multiple languages
+                with powerful extensions and version control integration.
               </p>
             </div>
           </div>
@@ -247,7 +287,9 @@ function Skill() {
             <div className="content">
               <h1 className="java_script">Git</h1>
               <p className="javascript_difination">
-              Git: A free, open-source version control system for tracking changes, managing code history, and enabling collaboration among developers on software projects
+                Git: A free, open-source version control system for tracking
+                changes, managing code history, and enabling collaboration among
+                developers on software projects
               </p>
             </div>
           </div>
@@ -255,7 +297,7 @@ function Skill() {
           <div className="card">
             <div className="card_images">
               <Image
-                style={{backgroundColor:"white"}}
+                style={{ backgroundColor: "white" }}
                 src="/images/github.png"
                 width={100}
                 height={100}
@@ -265,14 +307,15 @@ function Skill() {
             <div className="content">
               <h1 className="java_script">Github</h1>
               <p className="javascript_difination">
-              GitHub: A platform for hosting Git repositories, enabling version control, collaboration, and sharing of code with a community of developers.
+                GitHub: A platform for hosting Git repositories, enabling
+                version control, collaboration, and sharing of code with a
+                community of developers.
               </p>
             </div>
-
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -1,18 +1,38 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import React, {useState,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "./mainbar.css";
 import { IoMdClose } from "react-icons/io";
 import { FaDownload } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
+import { useAppContext } from "../../context/Appcontext";
 
 function Mainbar() {
-  const [displayedText, setDisplayedText] = useState('');
+  const [displayedText, setDisplayedText] = useState("");
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
-  const texts = ['Frontend','React.Js', 'Next.js','Tailwind CSS',"Html","CSS","Javascript",'Backend','Node.js','MongoDB',"Express.js",'Tools',"Git","Github","Cursor Ai","Chat Gpt"];
+
+  const { colormode,notification,showNotification } = useAppContext();
+  const texts = [
+    "Frontend",
+    "React.Js",
+    "Next.js",
+    "Tailwind CSS",
+    "Html",
+    "CSS",
+    "Javascript",
+    "Backend",
+    "Node.js",
+    "MongoDB",
+    "Express.js",
+    "Tools",
+    "Git",
+    "Github",
+    "Cursor Ai",
+    "Chat Gpt",
+  ];
 
   const typingSpeed = 100;
   const delay = 2000;
@@ -24,15 +44,15 @@ function Mainbar() {
           setDisplayedText((prev) => prev + currentText[charIndex]);
           setCharIndex((prev) => prev + 1);
         } else {
-          clearInterval(typingInterval); 
+          clearInterval(typingInterval);
           setTimeout(() => {
-            setDisplayedText('');
+            setDisplayedText("");
             setCharIndex(0);
-            setCurrentTextIndex((prev) => (prev + 1) % texts.length); 
+            setCurrentTextIndex((prev) => (prev + 1) % texts.length);
           }, delay);
         }
-      }, typingSpeed); 
-      return () => clearInterval(typingInterval); 
+      }, typingSpeed);
+      return () => clearInterval(typingInterval);
     }
   }, [currentTextIndex, charIndex, texts, typingSpeed, delay]);
   const [isopen, setIsopen] = useState(false);
@@ -40,45 +60,80 @@ function Mainbar() {
     setIsopen(!isopen);
   };
   return (
-    <div>
-      <div className="Main_conatainer">
+    <div
+      style={{
+        backgroundColor: colormode ? "white" : "rgb(12, 12, 41",
+      }}
+    >
+      <div
+        style={{
+          backgroundColor: colormode ? "white" : "",
+        }}
+        className="Main_conatainer"
+      >
         <div className="profile_section">
-          <h1 className="hello_name">Hello, i’m</h1>
+          <h1
+            style={{
+              color: colormode ? "black" : "",
+            }}
+            className="hello_name"
+          >
+            Hello, i’m
+          </h1>
           <div className="typing_effect">
-          <h1>Rajesh S.Sarkar </h1>
-          <h1  className="typing_effect_heading" >{displayedText}</h1>
+            <h1
+              style={{
+                color: colormode ? "black" : "",
+              }}
+            >
+              Rajesh Sarkar{" "}
+            </h1>
+            <h1 className="typing_effect_heading">{displayedText}</h1>
           </div>
-          <p className="my_difination">
+          <p
+            style={{
+              color: colormode ? "black" : "",
+            }}
+            className="my_difination"
+          >
             Freelance Softwere developer, Fullstack developer, & Data Miner.{" "}
             <br />I create seamless web experiences for end-users.
           </p>
           <div className="profile_button">
-            <button onClick={togglePopup} className="aboutme">
+            <button
+              style={{
+                backgroundColor: colormode ? "#1E293B" : "",
+              }}
+              onClick={togglePopup}
+              className="aboutme"
+            >
               About me{" "}
             </button>
-            <a
-              href="/cv/Rajehssarkar.pdf" 
-              download="RajeshSarkar.pdf" 
-            ><button
-            className="project"
-          >
-            Download cv <FaDownload />
-          </button></a>
-            
+            <a href="/cv/Rajehssarkar.pdf" download="RajeshSarkar.pdf">
+              <button className="project">
+                Download cv <FaDownload />
+              </button>
+            </a>
           </div>
         </div>
         {isopen && (
           <div className="popup">
             <div className="popup-inner">
               <div className="introduction">
-                <h2 style={{ margin: "0" }}>About me</h2>
+                <h2
+                  style={{
+                    margin: "0",
+                  }}
+                >
+                  About me
+                </h2>
                 <i onClick={togglePopup}>
                   <IoMdClose />
                 </i>
               </div>
               <p className="my_intro">
-                My name is Rajesh Sarkar , and I am a MERN stack developer with a
-                strong focus on website development and React.js. I m also
+                My name is Rajesh Sarkar , and I am a MERN stack developer with
+                a strong focus on website development and React.js. I m also
                 skilled in SEO and have experience building full-stack projects.
                 Currently pursuing a Bachelor of Computer Applications,software
                 engineering (BCA), I am passionate about technology and aspire
@@ -189,7 +244,12 @@ function Mainbar() {
             </div>
           </div>
         )}
-        <div className="profile_image">
+        <div
+          style={{
+            backgroundColor: colormode ? "#1E293B" : "",
+          }}
+          className="profile_image"
+        >
           <Image
             src="/images/profile.png"
             width={300}
@@ -197,6 +257,11 @@ function Mainbar() {
             alt="Picture of the author"
           />
         </div>
+        {showNotification && (
+          <div className="notification">
+            <p>{notification}</p>
+          </div>
+        )}
       </div>
       <div className="hire_me">
         <Link
@@ -206,10 +271,33 @@ function Mainbar() {
           HIRE ME
         </Link>
       </div>
-      <div className="experience_profile">
-        <div className="experience">
-          <h1 className="about_me">About me</h1>
-          <p className="paragraf" style={{ opacity: "0.5" }}>
+      <div
+        style={{
+          backgroundColor: colormode ? "white" : "",
+        }}
+        className="experience_profile"
+      >
+        <div
+          style={{
+            backgroundColor: colormode ? "white" : "rgb(12, 12, 41",
+          }}
+          className="experience"
+        >
+          <h1
+            style={{
+              color: colormode ? "black" : "",
+            }}
+            className="about_me"
+          >
+            About me
+          </h1>
+          <p
+            className="paragraf"
+            style={{
+              opacity: "0.5",
+              color: colormode ? "black" : "",
+            }}
+          >
             Hi, I m Rajesh Sarkar, a passionate frontend developer with a focus
             on creating dynamic and responsive web applications. With expertise
             in HTML, CSS, JavaScript, React.js, and the MERN stack, I specialize
@@ -219,7 +307,14 @@ function Mainbar() {
             I share tips, tutorials, and insights on frontend development to
             help you build seamless and visually appealing websites.
           </p>
-          <h1 className="about_me">Experience</h1>
+          <h1
+            style={{
+              color: colormode ? "black" : "",
+            }}
+            className="about_me"
+          >
+            Experience
+          </h1>
         </div>
         <div className="experience-card">
           <div className="experience-header">
