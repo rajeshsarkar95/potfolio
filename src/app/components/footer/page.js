@@ -7,7 +7,6 @@ import React from "react";
 
 function Footer() {
   const { colormode } = useAppContext();
-
   return (
     <div
       style={{

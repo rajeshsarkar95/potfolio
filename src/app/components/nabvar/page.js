@@ -15,9 +15,7 @@ import { BsToggleOn } from "react-icons/bs";
 
 function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
   const { toggleColorMode, colormode } = useAppContext();
-
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
@@ -28,7 +26,9 @@ function Navbar() {
           backgroundColor: colormode ? "white" : "",
           padding: "10px",
           transition: "background-color 0.3s ease, color 0.3s ease",
+          border: colormode ? "1px solid black" : "",
         }}
+        
       >
         <div className="logoname">
           <h2

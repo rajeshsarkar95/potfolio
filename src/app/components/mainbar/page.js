@@ -14,7 +14,7 @@ function Mainbar() {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
 
-  const { colormode,notification,showNotification } = useAppContext();
+  const { colormode, notification, showNotification } = useAppContext();
   const texts = [
     "Frontend",
     "React.Js",
@@ -264,13 +264,19 @@ function Mainbar() {
         )}
       </div>
       <div className="hire_me">
-        <Link
-          href="https://api.whatsapp.com/send?phone=9568755984&text=I%20want%20to%20hire%20you"
-          className="hireme_button"
-        >
-          HIRE ME
-        </Link>
-      </div>
+      <Link
+        href="https://wa.me/919568755984?text=Hi%20Rajesh!%20Nice%20to%20meet%20you.%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project.
+"
+        className="hireme_button"  
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"  
+          alt="WhatsApp"
+          className="hireme_image"
+        />
+      </Link>
+    </div>
+
       <div
         style={{
           backgroundColor: colormode ? "white" : "",
@@ -316,7 +322,10 @@ function Mainbar() {
             Experience
           </h1>
         </div>
-        <div className="experience-card">
+        <div style={{
+          backgroundColor:colormode ? 'white' : '',
+          border:colormode ? '1px solid black' : '',
+        }} className="experience-card">
           <div className="experience-header">
             <img
               src="https://cdn.worldvectorlogo.com/logos/upwork-1.svg"
@@ -324,7 +333,7 @@ function Mainbar() {
               className="company-logo"
             />
             <div>
-              <h2 className="job-title">Frontend Developer</h2>
+              <h2 style={{color: colormode? 'black' : ''}}  className="job-title">Frontend Developer</h2>
               <p className="duration">Nov 2023 - Present</p>
             </div>
           </div>
