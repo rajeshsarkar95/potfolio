@@ -20,6 +20,9 @@ export default function RootLayout({ children }) {
   return (
     <AppProvider>
       <html lang="en">
+        <head>
+        <link rel="icon" href="/images/profile.png" />
+        </head>
         <body  className={` ${geistSans.variable} ${geistMono.variable}`}>
           <Navbar />
           {children}

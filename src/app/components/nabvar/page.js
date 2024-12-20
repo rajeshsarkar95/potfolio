@@ -26,7 +26,7 @@ function Navbar() {
           backgroundColor: colormode ? "white" : "",
           padding: "10px",
           transition: "background-color 0.3s ease, color 0.3s ease",
-          border: colormode ? "1px solid black" : "",
+          borderBottom: colormode ? "1px solid black" : "",
         }}
         
       >
