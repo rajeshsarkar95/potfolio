@@ -12,7 +12,6 @@ import Link from "next/link";
 import { useAppContext } from "../../context/Appcontext";
 
 import { BsToggleOn } from "react-icons/bs";
-
 function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const { toggleColorMode, colormode } = useAppContext();
@@ -28,7 +27,6 @@ function Navbar() {
           transition: "background-color 0.3s ease, color 0.3s ease",
           borderBottom: colormode ? "1px solid black" : "",
         }}
-        
       >
         <div className="logoname">
           <h2
@@ -36,7 +34,12 @@ function Navbar() {
               color: colormode ? "black" : " ",
             }}
           >
-            Rajesh Sarkar
+            <Link
+              href="/"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              Rajesh Sarkar
+            </Link>
           </h2>
         </div>
         <div className="navigation">
