@@ -5,26 +5,6 @@ import Image from "next/image";
 import "./profile.css";
 
 function Profile() {
-  const [refreshCount, setRefreshCount] = useState(0);
-  useEffect(() => {
-    const storedCount = localStorage.getItem("refreshCount");
-    if (storedCount) {
-      setRefreshCount(parseInt(storedCount, 10));  
-    }
-  }, []);
-  useEffect(() => {
-    if (refreshCount !== 0) {
-      localStorage.setItem("refreshCount", refreshCount);
-    }
-  }, [refreshCount]);
-  const handleRefresh = () => {
-    setRefreshCount((prev) => prev + 1);
-  };
-
-  setTimeout(()=>{
-    handleRefresh
-  },1000)
-
   return (
     <div>
       <section className="welcome-section">

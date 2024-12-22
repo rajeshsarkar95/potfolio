@@ -11,20 +11,13 @@ function Skill() {
       style={{
         backgroundColor: colormode ? "" : "rgb(12, 12, 41)",
       }}
+      className="skill_conatainer"
     >
       <h1
         style={{
           color: colormode ? "black" : "",
           backgroundColor: colormode ? "white" : "",
-        }}
-        className="Skills_heading"
-      >
-        Skills:
-      </h1>
-      <h1
-        style={{
-          color: colormode ? "black" : "",
-          backgroundColor: colormode ? "white" : "",
+          marginTop:'0'
         }}
         className="Skills_heading"
       >
@@ -313,7 +306,7 @@ function Skill() {
               <p style={{color:colormode ? 'black' : ''}} className="javascript_difination">
                 VS Code: Lightweight, free, open-source code editor for
                 efficient coding, debugging, and supporting multiple languages
-                with powerful extensions and version control integration.
+                with powerful extensions,
               </p>
             </div>
           </div>

@@ -22,7 +22,9 @@
   border-radius: 6px;
   border: 1px solid transparent;
 }
-
+.skill_conatainer{
+  height: 136vh;
+}
 .card:hover {
   animation: movingBorder 10s infinite;
 }
@@ -73,7 +75,6 @@ p {
 }
 .Skills_heading {
   margin-left: 182px;
-  margin-top: 0;
   background-color: rgb(12, 12, 41);
   color: white;
 }
@@ -102,6 +103,9 @@ p {
     width: 100%;
     gap: 15px;
   }
+  .skill_conatainer{
+    height: 295vh;
+  }
   .card {
     width: 90%;
     height: auto;
@@ -120,6 +124,9 @@ p {
     flex-direction: row;
     width: 100%;
     padding: 2px;
+  }
+  .skill_conatainer{
+    height: 295vh;
   }
   .content {
     display: flex;
