@@ -34,10 +34,7 @@ function Navbar() {
               color: colormode ? "black" : " ",
             }}
           >
-            <Link
-              href="/"
-              style={{ textDecoration: "none", color: "inherit" }}
-            >
+            <Link href="/" style={{ textDecoration: "none", color: "inherit" }}>
               Rajesh Sarkar
             </Link>
           </h2>

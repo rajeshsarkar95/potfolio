@@ -109,7 +109,12 @@ function Mainbar() {
             >
               About me{" "}
             </button>
-            <a href="/cv/Rajehssarkar.pdf" download="RajeshSarkar.pdf">
+            <a 
+            style={{
+              backgroundColor: colormode ? "#1E293B" : "",
+            }}
+            className="download-link"
+            href="/cv/Rajehssarkar.pdf" download="RajeshSarkar.pdf">
               <button className="project">
                 Download cv <FaDownload />
               </button>

@@ -1,6 +1,4 @@
-"use client";  // Ensure it's a client-side component
-
-import React, { useState, useEffect } from "react";
+"use client"; // Ensure it's a client-side component
 import Image from "next/image";
 import "./profile.css";
 
@@ -34,51 +32,60 @@ function Profile() {
           </div>
         </div>
       </section>
-      <div className="images_gallary">
-        <div className="images_card">
-          <Image
-            src="/profiles/profile.jpg"
-            alt="Profile"
-            width={300}
-            height={400}
-          />
-        </div>
-        <div className="images_card">
-          <Image
-            className="galarry_images"
-            src="/profiles/zym.jpg"
-            alt="Gym"
-            width={300}
-            height={400}
-          />
-        </div>
-        <div className="images_card">
-          <Image
-            className="galarry_images"
-            src="/profiles/zym2.jpg"
-            alt="Gym 2"
-            width={300}
-            height={400}
-          />
-        </div>
-        <div className="images_card">
-          <Image
-            className="galarry_images"
-            src="/profiles/park.jpg"
-            alt="Park"
-            width={300}
-            height={400}
-          />
-        </div>
-        <div className="images_card">
-          <Image
-            className="galarry_images"
-            src="/profiles/park2.jpg"
-            alt="Park 2"
-            width={300}
-            height={400}
-          />
-        </div>
+
+      <div className="image-gallery">
+        {[
+          {
+            src: "/profiles/profile.jpg",
+            alt: "Profile",
+            description:
+              "Visited the pathology lab for tests, then captured pictures of my brother in the clinic.",
+          },
+          {
+            src: "/profiles/zym.jpg",
+            alt: "me and my friend anuj in zym",
+            description:"My friend and I went to the gym for an intense workout session and fun time."
+          },
+          {
+            src: "/profiles/zym2.jpg",
+            alt: "hey there are 3 zymnist boy",
+            description:"my friend riki and me going to gym for workout last year in 2023 and also my brother was there and name is vikash"
+          },
+          { src: "/profiles/park.jpg", alt: "Park",
+            description:"I’m heading to my business side, like a bee gathering honey for a successful venture."
+
+          },
+          { src: "/profiles/park2.jpg", alt: "Park ",
+            description:"I’m heading to my business side, like a bee gathering honey for a successful venture."
+           },
+        ].map((image, index) => (
+          <div className="image-gallery__card" key={index}>
+            <Image
+              className="image-gallery__card-image"
+              src={image.src}
+              alt={image.alt}
+              width={300}
+              height={200}
+            />
+            <div className="image-gallery__card-content">
+              <h3 className="image-gallery__card-title">{image.alt}</h3>
+              <p className="image-gallery__card-description">
+               {image.description}
+              </p>
+            </div>
+            <div className="image-gallery__card-buttons">
+              <button className="image-gallery__button image-gallery__button--like">
+                Like
+              </button>
+              <button className="image-gallery__button image-gallery__button--comment">
+                Comment
+              </button>
+              <button className="image-gallery__button image-gallery__button--share">
+                Share
+              </button>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

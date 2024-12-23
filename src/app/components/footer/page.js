@@ -11,6 +11,7 @@ function Footer() {
     <div
       style={{
         backgroundColor: colormode ? "white" : '',
+        borderTop: colormode ? "1px solid black" : ' ',
       }}
       className="footer_conatainer"
     >
