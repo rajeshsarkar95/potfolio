@@ -6,6 +6,8 @@ import { useAppContext } from "../../context/Appcontext";
 
 function Skill() {
   const { colormode } = useAppContext();
+
+  
   return (
     <div
       style={{
@@ -497,6 +499,42 @@ function Skill() {
               </p>
             </div>
           </div>
+          {/* card 4*/}
+          <div
+            style={{
+              backgroundColor: colormode ? "white" : "",
+              border: colormode ? "1px solid black" : "",
+            }}
+            className="card"
+          >
+            <div className="card_images">
+              <Image
+                style={{ backgroundColor: "white",
+                  objectFit:"contain"
+
+                }}
+                src="/images/postmane.png"
+                width={100}
+                height={100}
+                alt="Picture of the author"
+              />
+            </div>
+            <div className="content">
+              <h1
+                style={{ color: colormode ? "black" : "" }}
+                className="java_script"
+              >
+                Postmane
+              </h1>
+              <p
+                style={{ color: colormode ? "black" : "" }}
+                className="javascript_difination"
+              >
+                Postman: A collaboration platform for API development, enabling API testing, debugging, documentation, and sharing with a community of developers.
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>

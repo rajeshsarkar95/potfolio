@@ -23,7 +23,7 @@
   border: 1px solid transparent;
 }
 .skill_conatainer{
-  height: 136vh;
+  height: 152vh;
 }
 .card:hover {
   animation: movingBorder 10s infinite;
@@ -71,6 +71,10 @@
   color: white;
 }
 @media (max-width: 1024px) {
+
+  .skill_conatainer{
+    height: 260vh;
+  }
   .sub_card {
     width: 90%;
     gap: 20px;
@@ -96,9 +100,11 @@
     gap: 15px;
   }
   .skill_conatainer{
-    height: 295vh;
+    height: 310vh;
   }
   .card {
+    display: flex;
+    flex-direction: row;
     width: 90%;
     height: auto;
     padding: 10px;

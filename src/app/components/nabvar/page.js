@@ -81,6 +81,16 @@ function Navbar() {
                 style={{
                   color: colormode ? "black" : " ",
                 }}
+                href="/components/courses"
+              >
+                Courses
+              </Link>
+            </li>
+            <li className="underline-effect">
+              <Link
+                style={{
+                  color: colormode ? "black" : " ",
+                }}
                 href="/components/project"
               >
                 Projects
@@ -146,6 +156,9 @@ function Navbar() {
           </li>
           <li onClick={toggleSidebar}>
             <FcAbout /> <Link href="/components/profile">About me</Link>
+          </li>
+          <li onClick={toggleSidebar}>
+            <FcAbout /> <Link href="/components/courses">Courses</Link>
           </li>
           <li onClick={toggleSidebar}>
             <GrProjects /> <Link href="/components/project">Projects</Link>

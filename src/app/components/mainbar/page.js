@@ -1,5 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable @next/next/no-img-element */
 "use client";
 import React, { useState, useEffect } from "react";
 import "./mainbar.css";
@@ -13,8 +11,8 @@ function Mainbar() {
   const [displayedText, setDisplayedText] = useState("");
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
-
   const { colormode, notification, showNotification } = useAppContext();
+  
   const texts = [
     "Frontend",
     "React.Js",

@@ -4,7 +4,7 @@ const AppContext = createContext();
 export const AppProvider = ({ children }) => { 
   const [colormode, setColormode] = useState(false); 
   const [notification, setNotification] = useState(""); 
-  const [showNotification, setShowNotification] = useState(false); 
+  const [showNotification, setShowNotification] = useState(false);
 
   const toggleColorMode = () => {
     const newMode = !colormode;

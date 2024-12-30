@@ -1,0 +1,276 @@
+/* Carousel Container */
+.carousel-container {
+  margin-top: 12vh;
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  margin: 80px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.carousel-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-image {
+  width: 100%;
+  height: 50vh;
+  max-height: 600px;
+  display: block;
+  border-radius: 5px;
+  object-fit: fill;
+}
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-button-prev {
+  left: 10px;
+}
+
+.carousel-button-next {
+  right: 10px;
+}
+
+.details_heading{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 0;
+    justify-content: center;
+}
+.course-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Individual Card */
+  .course-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Image */
+  .course-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  /* Content */
+  .course-content {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .course-category {
+    font-size: 0.9rem;
+    color: #ff6600;
+    margin-bottom: 5px;
+  }
+  
+  .course-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  .course-price {
+    font-size: 1rem;
+    color: #ff0000;
+    font-weight: bold;
+  }
+  
+  .course-details {
+    font-size: 0.9rem;
+    color: #666;
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+  }
+  
+  .course-details span {
+    display: block;
+  }
+  
+  /* Button */
+  .join-button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .join-button:hover {
+    background-color: #e65500;
+  }
+  /* techar section */
+  .teachers-section {
+    padding: 4rem 2rem;
+    background-color: #f8f9fa;
+  }
+  
+  .teachers-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .teacher-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .teacher-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .teacher-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+  }
+  
+  .teacher-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .teacher-info {
+    padding: 1.5rem;
+  }
+  
+  .teacher-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    color: #333;
+  }
+  
+  .teacher-role {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .teacher-description {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  
+  .teacher-subject {
+    font-size: 1rem;
+    color: #ff6b6b;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .social-links a {
+    color: #666;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    color: #ff6b6b;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .teachers-container {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+  
+    .teacher-image {
+      height: 200px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .teachers-section {
+      padding: 2rem 1rem;
+    }
+  
+    .teacher-card {
+      max-width: 100%;
+    }
+  }
+  
+  
+@media (max-width: 1024px) {
+  .carousel-container {
+    width: 95%;
+  }
+  .carousel-image {
+    height: 40vh;
+  }
+  .carousel-button {
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    width: 100%;
+  }
+  .carousel-image {
+    height: 30vh;
+  }
+  .carousel-button {
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-container {
+    margin-top: 10vh;
+  }
+  .carousel-button {
+    padding: 5px 8px;
+  }
+}
