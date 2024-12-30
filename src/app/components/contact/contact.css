@@ -4,12 +4,21 @@
   margin: 20px auto;
   padding: 20px;
 }
-
+.contact-section{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
 h1 {
   text-align: center;
   color: #333;
 }
-
+.socials{
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
 p {
   text-align: center;
   color: #666;
@@ -31,7 +40,8 @@ label {
   margin-bottom: 5px;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 8px;
   margin-bottom: 10px;
@@ -46,7 +56,7 @@ textarea {
 button {
   width: 100%;
   padding: 10px;
-  background: #4CAF50;
+  background: #4caf50;
   color: white;
   border: none;
   border-radius: 4px;
