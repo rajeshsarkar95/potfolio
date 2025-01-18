@@ -1,47 +1,52 @@
+
 .contact-container {
   width: 80%;
   max-width: 600px;
   margin: 20px auto;
   padding: 20px;
 }
-.contact-section{
+
+.contact-section {
   display: flex;
   justify-content: center;
   text-align: center;
   flex-direction: column;
 }
-h1 {
+
+.contact-title {
   text-align: center;
   color: #333;
 }
-.socials{
+
+.contact-socials {
   display: flex;
   justify-content: center;
   gap: 12px;
 }
-p {
+
+.contact-text {
   text-align: center;
   color: #666;
   margin-bottom: 20px;
 }
 
-form {
+.contact-form {
   background: #f9f9f9;
   padding: 20px;
   border-radius: 8px;
 }
 
-.form-group {
+.contact-form-group {
   margin-bottom: 15px;
 }
 
-label {
+.contact-label {
   display: block;
   margin-bottom: 5px;
 }
 
-input,
-textarea {
+.contact-input,
+.contact-textarea {
   width: 100%;
   padding: 8px;
   margin-bottom: 10px;
@@ -49,11 +54,11 @@ textarea {
   border-radius: 4px;
 }
 
-textarea {
+.contact-textarea {
   resize: vertical;
 }
 
-button {
+.contact-button {
   width: 100%;
   padding: 10px;
   background: #4caf50;
@@ -63,11 +68,10 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.contact-button:hover {
   background: #45a049;
 }
 
-/* Simple Responsive Design */
 @media (max-width: 600px) {
   .contact-container {
     width: 95%;

@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import "./contact.css";
 import Image from "next/image";
@@ -6,67 +5,67 @@ import Link from "next/link";
 
 function Contact() {
   return (
-    <div className="container">
-      <h1 className="title">Contact me</h1>
-      <p className="subtitle">
-        A high-quality solution for those who want <br />a beautiful startup
+    <div className="contact-container">
+      <h1 className="contact-title">Contact Me</h1>
+      <p className="contact-text">
+        A high-quality solution for those who want <br /> a beautiful startup
         website quickly.
       </p>
       <div className="contact-section">
-        <p className="label">E-MAIL</p>
+        <p className="contact-label">E-MAIL</p>
         <a href="mailto:info@topass.com" className="contact-info">
           prorajeshsarkar@gmail.com
         </a>
       </div>
       <div className="contact-section">
-        <p className="label">PHONE</p>
+        <p className="contact-label">PHONE</p>
         <p className="contact-info">91+9568755984</p>
       </div>
-      <p className="label">Social</p>
-      <div className="socials">
+      <p className="contact-label">Social</p>
+      <div className="contact-socials">
         <Link href="https://www.facebook.com/profile.php?id=100056700738524">
           <Image
-            src="/social/feacbook.png"
+            src="/social/facebook.png"
             className="social-icon"
             width={20}
             height={20}
-            alt="feacbook"
+            alt="Facebook"
           />
         </Link>
         <Link href="https://api.whatsapp.com/send?phone=9568755984">
           <Image
-            src="/social/Whatapp.png"
+            src="/social/whatsapp.png"
             className="social-icon"
             width={20}
             height={20}
-            alt="whatapp"
+            alt="WhatsApp"
           />
         </Link>
-        <Link href="">
+        <Link href="#">
           <Image
-            src="/social/p.png"
+            src="/social/pinterest.png"
             className="social-icon"
             width={20}
             height={20}
-            alt="p"
+            alt="Pinterest"
           />
         </Link>
         <Link href="https://x.com/Rajesh956875">
           <Image
-            src="/social/twiter.png"
+            src="/social/twitter.png"
             className="social-icon"
             width={20}
             height={20}
-            alt="twiter"
+            alt="Twitter"
           />
         </Link>
-        <Link href="">
+        <Link href="#">
           <Image
-            src="/social/ni.png"
+            src="/social/linkedin.png"
             className="social-icon"
             width={20}
             height={20}
-            alt="linkedin"
+            alt="LinkedIn"
           />
         </Link>
         <Link href="https://www.instagram.com/raj_e_sh_sarkar/">
@@ -75,12 +74,12 @@ function Contact() {
             className="social-icon"
             width={20}
             height={20}
-            alt="instagram"
+            alt="Instagram"
           />
         </Link>
       </div>
-      {/*  */}
     </div>
   );
 }
+
 export default Contact;
