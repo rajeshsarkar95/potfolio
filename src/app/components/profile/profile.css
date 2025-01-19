@@ -74,7 +74,7 @@
 /* Card Image */
 .image-gallery__card-image {
   width: 100%;
-  height:400px;
+  height: 400px;
   object-fit: cover;
   border-bottom: 1px solid #ddd;
 }
@@ -127,10 +127,6 @@
 .image-gallery__button:hover {
   color: #000;
 }
-
-
-
-
 
 @media (max-width: 800px) {
   .welcome-section {

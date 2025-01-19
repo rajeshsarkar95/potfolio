@@ -38,7 +38,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 .my_difination {
-  margin-top: 0px;
+  margin-top: 12px;
   display: inline-block;
   font-size: 20px;
   font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -113,6 +113,7 @@
   margin-left: 46px;
 }
 .profile_button {
+  margin-top: 12px;
   cursor: pointer;
   display: flex;
   gap: 12px;
@@ -310,6 +311,8 @@ h6 {
 }
 
 .about_me {
+  margin-top: 12px; 
+  margin-bottom: 12px;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -364,12 +367,18 @@ h6 {
 }
 
 @media (max-width: 480px) {
+   .profile_button{
+    margin-top: 12px;
+   }
+   .my_difination{
+    margin-top: 20px;
+   }
   .profile_section h1 {
     font-size: 24px;
   }
 
   .profile_section p {
-    margin-top: 0;
+    margin-top: 12px;
     font-size: 14px;
   }
 

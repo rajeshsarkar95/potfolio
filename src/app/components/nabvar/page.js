@@ -172,7 +172,7 @@ function Navbar() {
           <Link href="https://www.facebook.com/profile.php?id=100056700738524">
             <Image
               style={{ color: "white" }}
-              src="/social/feacbook.png"
+              src="/social/facebook.png"
               className="nav_social-icon"
               width={20}
               height={20}
@@ -181,7 +181,7 @@ function Navbar() {
           </Link>
           <Link href="https://api.whatsapp.com/send?phone=9568755984">
             <Image
-              src="/social/Whatapp.png"
+              src="/social/whatsapp.png"
               className="nav_social-icon"
               width={20}
               height={20}
@@ -190,7 +190,7 @@ function Navbar() {
           </Link>
           <Link href="">
             <Image
-              src="/social/p.png"
+              src="/social/pinterest.png"
               className="nav_social-icon"
               width={20}
               height={20}
@@ -199,7 +199,7 @@ function Navbar() {
           </Link>
           <Link href="https://x.com/Rajesh956875">
             <Image
-              src="/social/twiter.png"
+              src="/social/twitter.png"
               className="nav_social-icon"
               width={20}
               height={20}
@@ -208,7 +208,7 @@ function Navbar() {
           </Link>
           <Link href="https://www.linkedin.com/in/rajesh-sarkar-9777b0302/">
             <Image
-              src="/social/ni.png"
+              src="/social/linkedin.png"
               className="nav_social-icon"
               width={20}
               height={20}
