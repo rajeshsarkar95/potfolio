@@ -5,6 +5,7 @@ import { FcAbout } from "react-icons/fc";
 import React, { useState } from "react";
 import { GrProjects } from "react-icons/gr";
 import { BsToggleOff } from "react-icons/bs";
+import { MdOutlineBookmarkAdd } from "react-icons/md";
 import { GrContact } from "react-icons/gr";
 import "./navbar.css";
 import Image from "next/image";
@@ -158,7 +159,7 @@ function Navbar() {
             <FcAbout /> <Link href="/components/profile">About me</Link>
           </li>
           <li onClick={toggleSidebar}>
-            <FcAbout /> <Link href="/components/courses">Courses</Link>
+          <MdOutlineBookmarkAdd /> <Link href="/components/courses">Courses</Link>
           </li>
           <li onClick={toggleSidebar}>
             <GrProjects /> <Link href="/components/project">Projects</Link>

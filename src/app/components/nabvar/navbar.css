@@ -56,6 +56,7 @@ nav {
   color: rgb(113, 4, 215);
 }
 .color_button {
+  margin-right: 12px;
   color: white;
   margin-top: 12px;
   font-size: 30px;
@@ -186,6 +187,9 @@ ul a {
   }
 }
 @media (min-width: 480px) {
+  .color_button {
+    margin-right: 12px;
+  }
   .colormode_icon{
     display: none;
   }
