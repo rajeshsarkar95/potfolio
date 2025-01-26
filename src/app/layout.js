@@ -16,7 +16,7 @@ export const metadata = {
   title: "Rajesh Sarkar",
   description: "Rajesh Sarkar",
   icons: {
-    icon: "/images/profile.png",
+    icon: "/logo/logo.png",
   },
 };
 export default function RootLayout({ children }) {
